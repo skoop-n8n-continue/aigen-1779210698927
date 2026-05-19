@@ -1,0 +1,36 @@
+{
+    "template_id": "vape_mondays_001",
+    "name": "Vape Mondays Promo",
+    "created_at": "2026-05-19T12:00:00Z",
+    "version": "1.0.0",
+    "theme": {
+        "style": "bold_pop",
+        "description": "High contrast, bold typography with a vibrant gradient background.",
+        "colors": ["#000000", "#FFFFFF", "Gradient (Pink to Yellow)"],
+        "mood": "energetic, modern, retail, punchy",
+        "tags": ["vape", "sale", "monday", "typography", "bold"]
+    },
+    "capabilities": {
+        "products_per_cycle": 1,
+        "cycles_through_all_products": true
+    },
+    "animation": {
+        "duration": 8,
+        "fps": 30,
+        "entrance_duration": 1.5,
+        "idle_duration": 5,
+        "exit_duration": 1.5,
+        "uses_plugins": ["SplitText", "CustomEase"]
+    },
+    "assets": {
+        "background": "https://skoop-signage-storage-v2-prod.s3.amazonaws.com/TmwxZfRN-fqtQCpm67zoME5og4rhk4opFizxcdYFp-s=_skoop_media_abbea8f473bce245ee9b93d4266e61a3_86751226.png",
+        "overlays": [],
+        "icons": [],
+        "fonts": ["Anton", "Inter"]
+    },
+    "technical": {
+        "resolution": "1920x1080",
+        "performance": "optimized",
+        "browser_compatibility": "chrome_latest"
+    }
+}

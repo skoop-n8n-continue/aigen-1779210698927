@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vape Mondays Promo</title>
+
+    <!-- GSAP Core + Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scene">
+        <div id="background"></div>
+
+        <div id="ticker-wrap">
+            <div id="ticker-content">
+                Mondays • 10% OFF VAPES • Mondays • 10% OFF VAPES • Mondays • 10% OFF VAPES • Mondays • 10% OFF VAPES •
+            </div>
+        </div>
+
+        <div id="typography-layer">
+            <div class="promo-badge">
+                <div class="badge-text">EVERY<br>MONDAY</div>
+            </div>
+            <h1 id="main-headline">10% OFF<br><span class="highlight">VAPES</span></h1>
+            <p id="sub-headline">Start your week right.</p>
+        </div>
+
+        <div id="products-container"></div>
+
+        <div id="foreground-layer">
+            <!-- Decorative SVG elements -->
+            <svg class="deco-circle circle-1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 5"/></svg>
+            <svg class="deco-circle circle-2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="#000" stroke-width="4"/></svg>
+            <svg class="deco-cross" viewBox="0 0 100 100"><path d="M50 0 L50 100 M0 50 L100 50" stroke="#fff" stroke-width="8"/></svg>
+        </div>
+    </div>
+    <script src="animation.js"></script>
+</body>
+</html>

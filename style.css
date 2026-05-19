@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+#scene {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+#background {
+    position: absolute;
+    inset: -50px; /* Slight bleed for parallax/scale */
+    background-image: url('https://skoop-signage-storage-v2-prod.s3.amazonaws.com/TmwxZfRN-fqtQCpm67zoME5og4rhk4opFizxcdYFp-s=_skoop_media_abbea8f473bce245ee9b93d4266e61a3_86751226.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: saturate(1.2) contrast(1.1);
+}
+
+#ticker-wrap {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    transform: translateY(-50%) rotate(-5deg);
+    white-space: nowrap;
+    z-index: 5;
+    background: #000;
+    padding: 20px 0;
+    mix-blend-mode: overlay;
+    opacity: 0.7;
+}
+
+#ticker-content {
+    display: inline-block;
+    font-family: 'Anton', sans-serif;
+    font-size: 180px;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#typography-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 120px;
+    pointer-events: none;
+}
+
+.promo-badge {
+    background: #000;
+    color: #fff;
+    display: inline-flex;
+    padding: 15px 30px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+    width: max-content;
+    border: 4px solid #fff;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
+}
+
+.badge-text {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+#main-headline {
+    font-family: 'Anton', sans-serif;
+    font-size: 280px;
+    line-height: 0.85;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 12px 12px 0px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+#main-headline .highlight {
+    color: #000;
+    text-shadow: none;
+    -webkit-text-stroke: 4px #fff;
+}
+
+#sub-headline {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+#products-container {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 800px;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-image-container {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    margin-bottom: 40px;
+}
+
+.product-shadow {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    filter: blur(20px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0 30px 30px rgba(0,0,0,0.4));
+}
+
+.product-info-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 4px solid #000;
+    transform: rotate(2deg);
+}
+
+.product-name {
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.product-meta {
+    font-size: 24px;
+    color: #666;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.product-price-wrapper {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 100px;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.price-original {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+#foreground-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.deco-circle {
+    position: absolute;
+    opacity: 0.4;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 100px;
+    left: 40%;
+}
+
+.deco-cross {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 200px;
+    right: 40%;
+    opacity: 0.5;
+}
